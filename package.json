@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/index.js -o build/bundle.js",
+    "build": "browserify --node src/index.js -o build/bundle.js",
     "start": "npm run build && node build/bundle.js",
-    "watch": "mkdir -p build && watchify src/index.js -o build/bundle.js",
+    "watch": "mkdir -p build && watchify --node src/index.js -o build/bundle.js",
     "dev": "npm run watch & devtool --watch --no-browser-globals build/bundle.js"
   },
   "author": "Chang Wang <cheapsteak@gmail.com> (https://github.com/cheapsteak)",
