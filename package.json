@@ -7,7 +7,7 @@
     "build": "babel src --out-dir build",
     "start": "npm run build && node build/index.js",
     "watch": "babel src --watch --out-dir build",
-    "dev": "npm run watch & devtool --watch --no-browser-globals build/index.js"
+    "dev": "npm run build && (npm run watch & devtool --watch --no-browser-globals build/index.js)"
   },
   "author": "Chang Wang <cheapsteak@gmail.com> (https://github.com/cheapsteak)",
   "license": "MIT",
